@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jzh.xx.transaction.mapper.XxCodeMapper">
+
+    <resultMap id="BaseResultMap" type="com.jzh.xx.transaction.develop.entity.XxCode">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="serviceName" column="service_name" jdbcType="VARCHAR"/>
+            <result property="codeName" column="code_name" jdbcType="VARCHAR"/>
+            <result property="tableName" column="table_name" jdbcType="VARCHAR"/>
+            <result property="tablePrefix" column="table_prefix" jdbcType="VARCHAR"/>
+            <result property="pkName" column="pk_name" jdbcType="VARCHAR"/>
+            <result property="packageName" column="package_name" jdbcType="VARCHAR"/>
+            <result property="baseMode" column="base_mode" jdbcType="INTEGER"/>
+            <result property="wrapMode" column="wrap_mode" jdbcType="INTEGER"/>
+            <result property="apiPath" column="api_path" jdbcType="VARCHAR"/>
+            <result property="webPath" column="web_path" jdbcType="VARCHAR"/>
+            <result property="isDeleted" column="is_deleted" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,service_name,code_name,
+        table_name,table_prefix,pk_name,
+        package_name,base_mode,wrap_mode,
+        api_path,web_path,is_deleted
+    </sql>
+</mapper>
